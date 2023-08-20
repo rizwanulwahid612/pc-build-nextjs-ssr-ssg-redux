@@ -1,0 +1,19 @@
+
+@media (max-width: 868px) {
+
+    /* Styles for laptops and smaller desktops */
+    .container {
+       
+        display: none;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 868px) {
+
+    /* Styles for larger desktops */
+    .container {
+       display: flex;
+       justify-content: space-between;
+    }
+}

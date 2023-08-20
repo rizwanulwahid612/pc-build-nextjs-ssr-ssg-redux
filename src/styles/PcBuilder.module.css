@@ -1,0 +1,46 @@
+/* Table and Card Widths: You can adjust the table and card widths to fit different screen sizes. */
+/* For tablets */
+@media (max-width: 1024px) {
+    .ant_table {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .ant_card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* CustomCardExtra Button: You can adjust the alignment of the buttons inside CustomCardExtra */
+/* For tablets and mobile devices */
+@media (max-width: 1024px) {
+    .custom-card-extra-button {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Expanded Row Content: You can adjust the layout of the expanded row content. */
+/* For tablets and mobile devices */
+@media (max-width: 1024px) {
+    .expanded-row-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Complete Build Button: You can adjust the alignment of the "Complete Build" button. */
+/* For tablets and mobile devices */
+@media (max-width: 768px) {
+    .complete-build-button {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+    }
+}
