@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "functions": {
+    "/api/auth/[...nextauth]": {},
+    "/featureProductDetailsPage/[featureProductDetailsPage]": {},
+    "/": {},
+    "/pccomponent/pcBuilder/pcBuilder": {},
+    "/productDetailsPage/[productDetailsPage]": {},
+    "/singleProductDetails/[singleProductDetails]": {},
+    "/userDashboard": {}
+  }
+}

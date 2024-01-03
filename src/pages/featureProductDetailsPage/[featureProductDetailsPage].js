@@ -46,30 +46,7 @@ const FeatureProductDetailsPage = ({ data }) => {
 
             </Row>
         </Link>
-        // <div>
-        //     <Row gutter={6} style={{ marginTop: '20px' }}>
-        //         {/* {products?.map((alldata) => ( */}
-        //         <Col xs={24} sm={24} md={12} lg={8} key={data?.d} style={{ marginBottom: "20px" }}>
-        //             {/* <Link href={`/singleProductDetails/${alldata?.productName}`}> */}
-        //             <Card
-        //                 title={''}
-        //                 hoverable
-        //                 cover={<img alt="example" src={data?.featureimage} width={370} height={200} />}
-        //             >
 
-        //                 <Meta title={data?.featureProduct} description={<><p>Category:{data?.category}</p><p>Price:{data?.price}</p><p>Status:{data?.status}</p></>} />
-
-        //                 <Rate allowHalf defaultValue={data?.rating} />
-
-
-        //                 {/* <Link href={`/productDetailsPage/${alldata?.featureProduct}`}><Button>Products Page</Button></Link> */}
-        //             </Card>
-        //             {/* </Link> */}
-
-        //         </Col>
-        //         {/* // ))} */}
-        //     </Row>
-        // </div>
 
     )
 }
