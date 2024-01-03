@@ -13,7 +13,7 @@ const HomePage = ({ posts }) => {
   return (
     <div>
       <Banner></Banner>
-      <Divider style={{ fontSize: "45px", display: "flex", justifyItems: "center", justifyContent: "center" }} orientation="center">Featured Products</Divider>
+      <Divider style={{ fontSize: "40px", display: "flex", justifyItems: "center", justifyContent: "center" }} orientation="center">Featured Products</Divider>
       <div>
         <Row gutter={6} style={{ marginTop: '20px' }}>
           {posts?.map((alldata) => (

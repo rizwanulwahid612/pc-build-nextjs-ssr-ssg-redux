@@ -134,7 +134,7 @@ const RootLayout = ({ children }) => {
                 }}
             >
 
-                <h1><Link style={{ color: "white", display: 'flex', justifyItems: 'center' }} href={"/"}>Hero Tech</Link></h1>
+                <h1><Link style={{ color: "white", display: 'flex', justifyItems: 'center' }} href={"/"}>HeroTech</Link></h1>
 
                 <div className="demo-logo" />
 
@@ -211,7 +211,7 @@ const RootLayout = ({ children }) => {
                 </div>
                 {/* bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb */}
 
-                <div style={{ display: windowWidth >= 700 && windowWidth <= 1006 ? 'block' : 'none' }}>
+                <div style={{ display: windowWidth >= 350 && windowWidth <= 900 ? 'block' : 'none' }}>
                     <MobileMenuToggle
                         type="text"
                         icon={<a style={{ color: "white" }}><MenuOutlined /></a>}

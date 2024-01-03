@@ -1,10 +1,16 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/featureProductDetailsPage/[featureProductDetailsPage]": "pages/featureProductDetailsPage/[featureProductDetailsPage].js",
-  "/productDetailsPage/[productDetailsPage]": "pages/productDetailsPage/[productDetailsPage].js",
-  "/singleProductDetails/[singleProductDetails]": "pages/singleProductDetails/[singleProductDetails].js",
+  "/footer/footer": "pages/footer/footer.html",
+  "/login/login": "pages/login/login.html",
+  "/register/register": "pages/register/register.html",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
   "/": "pages/index.js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js"
+  "/singleProductDetails/[singleProductDetails]": "pages/singleProductDetails/[singleProductDetails].js",
+  "/featureProductDetailsPage/[featureProductDetailsPage]": "pages/featureProductDetailsPage/[featureProductDetailsPage].js",
+  "/_error": "pages/_error.js",
+  "/userDashboard": "pages/userDashboard.js",
+  "/productDetailsPage/[productDetailsPage]": "pages/productDetailsPage/[productDetailsPage].js",
+  "/pccomponent/pcBuilder/pcBuilder": "pages/pccomponent/pcBuilder/pcBuilder.js",
+  "/404": "pages/404.html"
 }
