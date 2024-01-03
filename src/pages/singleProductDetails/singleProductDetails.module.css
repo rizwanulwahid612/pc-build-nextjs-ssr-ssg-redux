@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    gap: 50px;
+}
+
+/* Media query for screens below 700px */
+@media (max-width: 950px) {
+    .container {
+    display:block;
+    }
+
+    /* Style for the image */
+   
+}

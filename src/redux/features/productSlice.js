@@ -1,7 +1,7 @@
 
 import { createSlice } from '@reduxjs/toolkit'
 //import type { PayloadAction } from '@reduxjs/toolkit'
-
+import { message } from 'antd';
 
 const initialState = {
     products: [],
@@ -11,22 +11,14 @@ export const productSlice = createSlice({
     name: 'product',
     initialState,
     reducers: {
-        // addToCart: (state, action) => {
-        //     const matchId = state.products.find(product => product?.id === action.payload?.id)
-        //     if (matchId) {
-        //         state.products.push(action.payload)
 
-        //     } else {
-        //         console.log("product id not match")
-        //     }
-
-        // }
         addToCart: (state, action) => {
             const existing = state.products.find(product => product.productName === action.payload.productName)
             if (existing) {
-                console.log("already product exist")
+                message.error('Already product exist');
             } else {
                 state.products.push(action.payload)
+                message.success('Product added Successfully');
             }
 
         },
@@ -35,11 +27,14 @@ export const productSlice = createSlice({
                 (product) => product.productName !== action.payload.productName
             );
         },
+        clearCart: (state) => {
+            state.products = [];
+        },
 
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { addToCart, removeFromCart } = productSlice.actions
+export const { addToCart, removeFromCart, clearCart } = productSlice.actions
 
 export default productSlice.reducer

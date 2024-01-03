@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import RootLayout from '@/component/RootLayout'
 import Banner from '@/component/Ui/Banner'
-import { Button, Col, Divider, Image, Row } from 'antd'
+import { Button, Col, Divider, Image, Row, Rate } from 'antd'
 import { Card } from 'antd';
 import Link from 'next/link';
 const { Meta } = Card;
@@ -25,29 +25,27 @@ const UserDashboard = ({ posts }) => {
 
     return (
         <div>
-            <Row
-                gutter={[16, 16]}
-                style={{
-                    marginTop: "20px",
-                    justifyContent: 'center'
-                }}
-            >
+            <Row gutter={6} style={{ marginTop: '20px' }}>
                 {postdata?.map((alldata) => (
-                    <Col key={alldata?.id} className="gutter-row" span={8} xs={24} sm={12} md={8} lg={6}>
+                    <Col xs={24} sm={24} md={12} lg={8} key={alldata?.d} style={{ marginBottom: "20px" }}>
+                        <Link href={`/singleProductDetails/${alldata?.productName}`}>
+                            <Card
+                                title={''}
+                                hoverable
+                                cover={""}
+                            >
+                                <Image alt="example" src={alldata?.image} width={"100%"} height={300} />
+                                <Meta title={alldata?.featureProduct} description={<><p>Product Name:{alldata?.productName}</p><p>Price:{alldata?.price}</p><p>Status:{alldata?.status}</p></>} />
+                                <Rate allowHalf defaultValue={alldata?.avarageRating} />
+                                {/* <p>Avarage Rating:{alldata?.avarageRating}</p> */}
 
-                        <Card
-                            hoverable
-                            style={{
-                                width: 300,
-                            }}
-                            cover={<Image alt="example" src={alldata?.image} width={300} height={200} />}
-                        >
-                            <Meta title={alldata?.featureProduct} description={<><p>Category:{alldata?.category}</p><p>Price:{alldata?.price}</p><p>Status:{alldata?.status}</p><p>Rating:{alldata?.rating}</p></>} />
-                            <Link href={`/productDetailsPage/${alldata?.featureProduct}`}><Button>Products Page</Button></Link>
-                        </Card>
+
+                            </Card>
+                        </Link>
                     </Col>
                 ))}
             </Row>
+
         </div>
     )
 }

@@ -1,13 +1,13 @@
 
 import React, { useState } from 'react';
-import { Button, Card, FloatButton, Space, Table, Tag, Avatar, Badge } from 'antd';
+import { Button, Card, FloatButton, Space, Table, Tag, Avatar, Badge, message } from 'antd';
 import RootLayout from '@/component/RootLayout';
 import Link from 'next/link';
 import { CloseCircleOutlined, CloseOutlined } from '@ant-design/icons';
 import { useGetProductByIdQuery } from '@/redux/api/api';
 import { useRouter } from 'next/router';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
-import { removeFromCart } from '@/redux/features/productSlice';
+import { clearCart, removeFromCart } from '@/redux/features/productSlice';
 import styles from '@/styles/PcBuilder.module.css';
 import { useSession } from 'next-auth/react';
 const { Column, ColumnGroup } = Table;
@@ -48,7 +48,7 @@ const PcBuilder = ({ posts }) => {
         }
     };
 
-    const postsWithMatchingProducts = posts.map((post) => {
+    const postsWithMatchingProducts = posts?.map((post) => {
 
         const matchingProducts = products.filter((product) => product.id === post.id);
 
@@ -63,7 +63,7 @@ const PcBuilder = ({ posts }) => {
         };
     });
     console.log(postsWithMatchingProducts)
-    const isBuildCompleteDisabled = postsWithMatchingProducts.some(post => post.products.length === 0);
+    const isBuildCompleteDisabled = postsWithMatchingProducts?.some(post => post?.products?.length === 0);
     const dispatch = useAppDispatch()
 
     //  const dataStore = postsWithMatchingProducts.filter(datast => datast)
@@ -82,9 +82,14 @@ const PcBuilder = ({ posts }) => {
         });
 
         if (response.ok) {
-            alert('complect build successfull')
+            // message.success('Product added Successfully');
+            message.success('complect build successfull')
+            dispatch(clearCart(products))
+            console.log(products)
+            //toast.success('This is a success message');
             const responseData = await response.json();
-            console.log(responseData);
+            //console.log(responseData);
+
         } else {
             console.error('Failed to store data:', response.statusText);
         }
@@ -185,7 +190,8 @@ const PcBuilder = ({ posts }) => {
                 dataSource={postsWithMatchingProducts}
             />
             <div style={{ display: 'flex', justifyContent: 'end' }}>
-                <Link href='/'><Button onClick={() => handleCompleteBuild()} type="primary" danger disabled={isBuildCompleteDisabled} >Complete Build</Button></Link>
+                <Link href='/'><Button onClick={() => handleCompleteBuild()} type="primary" danger disabled={isBuildCompleteDisabled} >Complete Build</Button> </Link>
+
             </div>
         </div>
     );
@@ -201,17 +207,26 @@ PcBuilder.getLayout = function getLayout(page) {
 }
 export default PcBuilder
 
-
-export async function getStaticProps() {
-    const res = await fetch('http://localhost:5000/alldata')
-    const posts = await res.json()
+export async function getServerSideProps() {
+    const res = await fetch('http://localhost:5000/alldata');
+    const posts = await res.json();
 
     return {
         props: {
             posts,
         },
-    }
+    };
 }
+// export async function getStaticProps() {
+//     const res = await fetch('http://localhost:5000/alldata')
+//     const posts = await res.json()
+
+//     return {
+//         props: {
+//             posts,
+//         },
+//     }
+// }
 
 
 
