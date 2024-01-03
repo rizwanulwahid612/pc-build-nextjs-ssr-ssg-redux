@@ -2,15 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/login/login": "pages/login/login.html",
-  "/footer/footer": "pages/footer/footer.html",
-  "/register/register": "pages/register/register.html",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
   "/featureProductDetailsPage/[featureProductDetailsPage]": "pages/featureProductDetailsPage/[featureProductDetailsPage].js",
-  "/": "pages/index.js",
-  "/userDashboard": "pages/userDashboard.js",
-  "/singleProductDetails/[singleProductDetails]": "pages/singleProductDetails/[singleProductDetails].js",
   "/productDetailsPage/[productDetailsPage]": "pages/productDetailsPage/[productDetailsPage].js",
-  "/pccomponent/pcBuilder/pcBuilder": "pages/pccomponent/pcBuilder/pcBuilder.js",
-  "/404": "pages/404.html"
+  "/singleProductDetails/[singleProductDetails]": "pages/singleProductDetails/[singleProductDetails].js",
+  "/": "pages/index.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js"
 }
