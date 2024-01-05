@@ -1,16 +1,12 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/footer/footer": "pages/footer/footer.html",
-  "/login/login": "pages/login/login.html",
-  "/register/register": "pages/register/register.html",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/": "pages/index.js",
-  "/singleProductDetails/[singleProductDetails]": "pages/singleProductDetails/[singleProductDetails].js",
-  "/featureProductDetailsPage/[featureProductDetailsPage]": "pages/featureProductDetailsPage/[featureProductDetailsPage].js",
   "/_error": "pages/_error.js",
-  "/userDashboard": "pages/userDashboard.js",
+  "/_document": "pages/_document.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
   "/productDetailsPage/[productDetailsPage]": "pages/productDetailsPage/[productDetailsPage].js",
+  "/": "pages/index.js",
+  "/featureProductDetailsPage/[featureProductDetailsPage]": "pages/featureProductDetailsPage/[featureProductDetailsPage].js",
   "/pccomponent/pcBuilder/pcBuilder": "pages/pccomponent/pcBuilder/pcBuilder.js",
-  "/404": "pages/404.html"
+  "/singleProductDetails/[singleProductDetails]": "pages/singleProductDetails/[singleProductDetails].js",
+  "/userDashboard": "pages/userDashboard.js"
 }
