@@ -87,10 +87,10 @@ const Login = () => {
             </Form>
             <div style={{ display: "flex" }}>
                 <div>
-                    <Button><a><GoogleOutlined onClick={() => signIn("google", { callbackUrl: "http://localhost:3000/" })} /></a></Button>
+                    <Button><a><GoogleOutlined onClick={() => signIn("google", { callbackUrl: `http://localhost:3000/` })} /></a></Button>
                 </div>
                 <div style={{ display: "flex", marginLeft: "40px" }}>
-                    <Button><a><GithubOutlined onClick={() => signIn("github", { callbackUrl: "http://localhost:3000/" })} /> </a></Button>
+                    <Button><a><GithubOutlined onClick={() => signIn("github", { callbackUrl: `http://localhost:3000/` })} /> </a></Button>
                 </div>
             </div>
         </div>

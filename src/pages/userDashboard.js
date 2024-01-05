@@ -62,7 +62,7 @@ export default UserDashboard
 
 // This function gets called at build time
 export async function getStaticProps() {
-    const res = await fetch('http://localhost:5000/getUserPostData')
+    const res = await fetch(`${process.env.URL}/getUserPostData`)
     const posts = await res.json()
 
     return {

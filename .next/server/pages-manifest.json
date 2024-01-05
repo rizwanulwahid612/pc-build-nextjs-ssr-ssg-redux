@@ -1,12 +1,16 @@
 {
-  "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
+  "/footer/footer": "pages/footer/footer.html",
+  "/login/login": "pages/login/login.html",
+  "/register/register": "pages/register/register.html",
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/productDetailsPage/[productDetailsPage]": "pages/productDetailsPage/[productDetailsPage].js",
-  "/": "pages/index.js",
   "/featureProductDetailsPage/[featureProductDetailsPage]": "pages/featureProductDetailsPage/[featureProductDetailsPage].js",
-  "/pccomponent/pcBuilder/pcBuilder": "pages/pccomponent/pcBuilder/pcBuilder.js",
+  "/": "pages/index.js",
   "/singleProductDetails/[singleProductDetails]": "pages/singleProductDetails/[singleProductDetails].js",
-  "/userDashboard": "pages/userDashboard.js"
+  "/userDashboard": "pages/userDashboard.js",
+  "/pccomponent/pcBuilder/pcBuilder": "pages/pccomponent/pcBuilder/pcBuilder.js",
+  "/productDetailsPage/[productDetailsPage]": "pages/productDetailsPage/[productDetailsPage].js",
+  "/404": "pages/404.html"
 }

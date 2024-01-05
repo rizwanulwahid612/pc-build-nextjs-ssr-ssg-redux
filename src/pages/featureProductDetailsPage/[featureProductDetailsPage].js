@@ -62,7 +62,7 @@ FeatureProductDetailsPage.getLayout = function getLayout(page) {
 export default FeatureProductDetailsPage
 
 export const getStaticPaths = async () => {
-    const res = await fetch("http://localhost:5000/alldata")
+    const res = await fetch(`${process.env.URL}/alldata`)
     const data = await res.json()
 
     const paths = data.map((products) => ({
@@ -75,7 +75,7 @@ export const getStaticPaths = async () => {
 }
 export const getStaticProps = async (context) => {
     const { params } = context;
-    const res = await fetch(`http://localhost:5000/alldata/${params.featureProductDetailsPage}`);
+    const res = await fetch(`${process.env.URL}/alldata/${params.featureProductDetailsPage}`);
     const data = await res.json();
     return {
         props: {

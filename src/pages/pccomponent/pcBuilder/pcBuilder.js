@@ -73,7 +73,7 @@ const PcBuilder = ({ posts }) => {
             email: session?.user?.email,
             data: products,
         };
-        const response = await fetch('http://localhost:5000/storeData', {
+        const response = await fetch(`${process.env.URL}/storeData`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -208,7 +208,7 @@ PcBuilder.getLayout = function getLayout(page) {
 export default PcBuilder
 
 export async function getServerSideProps() {
-    const res = await fetch('http://localhost:5000/alldata');
+    const res = await fetch(`${process.env.URL}/alldata`);
     const posts = await res.json();
 
     return {

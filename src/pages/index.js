@@ -55,7 +55,7 @@ export default HomePage
 
 // This function gets called at build time
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:5000/alldata')
+  const res = await fetch(`${process.env.URL}/alldata`)
   const posts = await res.json()
   console.log(posts)
   return {
